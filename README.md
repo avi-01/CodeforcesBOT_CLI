@@ -26,7 +26,7 @@ There is conifg.json in which you can set compiler and std of c++ you use.
 
 ## Template
 
-Predefined template.cpp is provide in assests folder that each default sol.cpp. You can save your own templae in template.cpp.
+Predefined template, i.e, template.cpp is provide in assests folder that is default code for each sol.cpp. You can save your own templae in template.cpp.
 
 ## Additional Features
 
