@@ -68,6 +68,9 @@ function getOuput() {
       const inputFile = join(inputFolder, inputNo);
       const codeOutputFile = join(codeOutputFolder, `codeOutput${i}.txt`);
 
+      
+      const cmd = `${fileName} < ${inputFile}`;
+
       const { stdout, stderr, code }  = exec(cmd, { silent: true });
 
       if (code !== 0) {
