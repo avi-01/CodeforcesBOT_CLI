@@ -1,6 +1,6 @@
 # CodeforcesBOT_CLI
 
-CodeForces Bot to download all the sample test cases of codeforces contest and add them to their directory. Also have a sol.cpp for each problem. You can run all the sample test cases of problem on your code with one command.
+CodeForcesBot download all the sample test cases of codeforces contest problem and add them to its respective directory. Also have a sol.cpp for each problem with a predifend template. You can run all the sample test cases of a problem on your code with one command.
 
 ## Requirements
 This application is coded in js language. You need node.js to run the code. 
