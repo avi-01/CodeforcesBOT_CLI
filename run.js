@@ -68,11 +68,15 @@ function getOuput() {
       const inputFile = join(inputFolder, inputNo);
       const codeOutputFile = join(codeOutputFolder, `codeOutput${i}.txt`);
 
-      const cmd = `${fileName} < ${inputFile} > ${codeOutputFile} `;
+      const { stdout, stderr, code }  = exec(cmd, { silent: true });
 
-      if (exec(cmd).code !== 0) {
+      if (code !== 0) {
         handleError("Solution doest not run for the input" + i);
       }
+      
+      const modOut = stdout.replace( /(\r\n)+/g, "\n" ).replace( /\r+/g, "\n" ).trim();
+      
+      createFile(codeOutputFile, modOut);
 
       if (!testOutput(codeOutputFile, outputFile, i)) {
         failedTestCases.push({
@@ -133,6 +137,11 @@ function outputTestCases(failedTestCases) {
 
   console.log(table(data));
 }
+
+function createFile(fileName, test_case) {
+  fs.writeFileSync(fileName, test_case, (err) => err ? handleError(err) : null);
+}
+
 
 function readFile(file) {
   checkExist(file, fs.existsSync(file));

@@ -1,4 +1,4 @@
 {
-    "compiler": "g++-8",
+    "compiler": "g++",
     "std": "c++14"
 }
