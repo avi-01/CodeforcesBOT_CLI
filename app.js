@@ -47,8 +47,8 @@ async function getQuestions() {
 
 
   // #TODO Disable Pdf for exe files 
-  if(pdfTrue=="true" || pdfTrue==1)
-    getProblemStatement(problemsId);
+  // if(pdfTrue=="true" || pdfTrue==1)
+  //   getProblemStatement(problemsId);
 
 }
 
