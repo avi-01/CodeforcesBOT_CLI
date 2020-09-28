@@ -23,5 +23,5 @@ If you do not have node.js in your system, you can install it from [Node.js](htt
 
 ## Additional Features
 
-You can also download pdf format of problems by providing additional arguments pdfTrue to app.js. Example `node app.js --contestCode 1420 --pdfTrue`.
+You can also download pdf format of problems by providing additional arguments pdfTrue to app.js. Example `node app.js --contestCode 1420 --pdfTrue`. <br>
 **But this need puppeteer library. You need to install it by running `npm i puppeteer --save`.**
