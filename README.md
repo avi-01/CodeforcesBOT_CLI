@@ -24,6 +24,10 @@ If you do not have node.js in your system, you can install it from [Node.js](htt
 ## Config File
 There is conifg.json in which you can set compiler and std of c++ you use.
 
+## Template
+
+Predefined template.cpp is provide in assests folder that each default sol.cpp. You can save your own templae in template.cpp.
+
 ## Additional Features
 
 You can also download pdf format of problems by providing additional arguments pdfTrue to app.js. Example `node app.js --contestCode 1420 --pdfTrue`. <br>
