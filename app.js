@@ -1,10 +1,12 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const colors = require("colors");
-const puppeteer = require('puppeteer')
 const fs = require("fs");
 const {argv}  = require("yargs");
 const {join} = require("path")
+
+//Uncomment to create pdf after installing puppeteer
+// const puppeteer = require('puppeteer')
 
 const contestCode = argv.contestCode ? argv.contestCode : process.argv[2];
 const pdfTrue = argv.pdfTrue ? argv.pdfTrue : process.argv[3];
@@ -21,13 +23,6 @@ getQuestions();
 function createReqFiles() {
   createDir(join(__dirname, "..", "Codeforces"));
   createDir(dir);
-  // if (!fs.existsSync(join(dir,'runall.sh'))) {
-  //   fs.copyFile(join(assetsDir,"runall.sh"), join(dir,'runall.sh'), (err) => err ? handleError(err) : null);
-  // }
-
-  // if (!fs.existsSync(join(dir,'compare.sh'))) {
-  //   fs.copyFile(join(assetsDir,"compare.sh"), join(dir,'compare.sh'), (err) => err ? handleError(err) : null);
-  // }
 }
 
 async function getQuestions() {
@@ -46,7 +41,9 @@ async function getQuestions() {
 
 
 
-  // #TODO Disable Pdf for exe files 
+  // #TODO Disable Pdf for exe files (You need Puppeteer to create pdf. After installing Puppeteer (npm i puppeteer --save)
+  //uncomment required and these line to create pdf.)
+  
   // if(pdfTrue=="true" || pdfTrue==1)
   //   getProblemStatement(problemsId);
 
