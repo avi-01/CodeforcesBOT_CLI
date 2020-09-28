@@ -8,7 +8,7 @@ const {join} = require("path")
 //Uncomment to create pdf after installing puppeteer
 // const puppeteer = require('puppeteer')
 
-const contestCode = argv.contestCode ? argv.contestCode : process.argv[2];
+const contestCode = argv.contestCode ? argv.contestCode.toString() : process.argv[2];
 const pdfTrue = argv.pdfTrue ? argv.pdfTrue : process.argv[3];
 
 const dir = join(__dirname, "..", "Codeforces",contestCode);
