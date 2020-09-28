@@ -5,8 +5,9 @@ const fs = require("fs");
 const {argv}  = require("yargs");
 const {join} = require("path")
 
-//Uncomment to create pdf after installing puppeteer
-const puppeteer = require('puppeteer')
+// #TODO You need Puppeteer to create pdf. After installing Puppeteer (npm i puppeteer --save)
+//uncomment required and these line to create pdf.)
+// const puppeteer = require('puppeteer')
 
 const contestCode = argv.contestCode ? argv.contestCode.toString() : process.argv[2];
 const pdfTrue = argv.pdfTrue ? argv.pdfTrue : process.argv[3];
@@ -41,10 +42,9 @@ async function getQuestions() {
 
 
 
-  // #TODO You need Puppeteer to create pdf. After installing Puppeteer (npm i puppeteer --save)
-  //uncomment required and these line to create pdf.)
+
   
-  if(pdfTrue=="true" || pdfTrue==1)
+  if( (typeof puppeteer !== 'undefined') && (pdfTrue=="true" || pdfTrue==1))
     getProblemStatement(problemsId);
 
 }
