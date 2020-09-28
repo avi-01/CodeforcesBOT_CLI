@@ -41,7 +41,7 @@ async function getQuestions() {
 
 
 
-  // #TODO Disable Pdf for exe files (You need Puppeteer to create pdf. After installing Puppeteer (npm i puppeteer --save)
+  // #TODO You need Puppeteer to create pdf. After installing Puppeteer (npm i puppeteer --save)
   //uncomment required and these line to create pdf.)
   
   // if(pdfTrue=="true" || pdfTrue==1)
