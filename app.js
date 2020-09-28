@@ -139,7 +139,7 @@ async function printPDF(url, path, id) {
   try {
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
-    await page.goto(url, {waitUntil: 'networkidle0'});
+    await page.goto(url, {waitUntil: 'networkidle0', timeout: 0});
     await page.pdf({path:path});
    
     await browser.close();
