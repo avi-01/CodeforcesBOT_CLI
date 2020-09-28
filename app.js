@@ -12,6 +12,13 @@ const {join} = require("path")
 const contestCode = argv.contestCode ? argv.contestCode.toString() : process.argv[2];
 const pdfTrue = argv.pdfTrue ? argv.pdfTrue : process.argv[3];
 
+
+if (contestCode == null) {
+console.log("Please enter the contest code".red);
+return;
+}
+
+
 const dir = join(__dirname, "..", "Codeforces",contestCode);
 const assetsDir = join(__dirname,"assets");
 const baseUrl = "https://codeforces.com";
@@ -27,11 +34,6 @@ function createReqFiles() {
 }
 
 async function getQuestions() {
-  if (contestCode == null) {
-    console.log("Please enter the contest code".red);
-    return;
-  }
-
   console.log("Fetching the data...".yellow);
 
   const problemsId = await getProblemsID();
