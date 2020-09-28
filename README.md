@@ -21,7 +21,10 @@ If you do not have node.js in your system, you can install it from [Node.js](htt
 - You can write your solution in sol.cpp file of problem dir.
 - To check for sample cases, execute *node run.js contest_code_of_codeforces problem_code*. run.js take contest code and problem id as arguments. Example `node run.js 1420 A` to check the sample test cases to your sol.cpp of problem A of contest code 1420.
 
+## Config File
+There is conifg.json in which you can set compiler and std of c++ you use.
+
 ## Additional Features
 
 You can also download pdf format of problems by providing additional arguments pdfTrue to app.js. Example `node app.js --contestCode 1420 --pdfTrue`. <br>
-**But this need puppeteer library. You need to install it by running `npm i puppeteer --save`.**
+**But this need puppeteer library. You need to install it by running `npm i puppeteer --save`.** After installing the puppeteer uncomment the required line of puppeteer in app.js file.
