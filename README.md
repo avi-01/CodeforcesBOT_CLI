@@ -17,3 +17,4 @@ If you do not have node.js in your system, you can install it from [Node.js](htt
 - Get the contest number of codeforces of which you want to download sample test case. Contest number is in the url. ~~https://codeforces.com/contest/~~ **1420**
 - Open the terminal in CodeforcesBOT_CLI.
 - Execute *node app.js contest_code_of_codeforces* in the terminal. app.js take contest code as argument. Example `node app.js 1420` or `node app.js --contestCode 1420`.
+- Above command will create a folder Codeforces in ../CodeforcesBOT_CLI - i.e. 1 folder back to current foleder(CodeforcesBOT_CLI). Codeforces will conist of contest code folder that will have the problem folder with sample testcases and a sol.cpp file.
