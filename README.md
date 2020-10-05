@@ -2,7 +2,7 @@
 
 ### CodeForcesBot features:-<br>
 - Download all the sample test cases of codeforces contest problem and add them to its respective directory.
-- Add a sol.cpp to each problem with a predifend template.
+- Add a sol.cpp to each problem with a predefined template.
 - You can run all the sample test cases of a problem on your code with one command.
 
 ## Requirements
@@ -23,13 +23,13 @@ If you do not have node.js in your system, you can install it from [Node.js](htt
 - To check for sample cases, execute *node run.js contest_code_of_codeforces problem_code*. run.js take contest code and problem id as arguments. Example `node run.js 1420 A` to check the sample test cases to your sol.cpp of problem A of contest code 1420.
 
 ## Config File
-There is conifg.json in which you can set compiler and std of c++ you use.
+There is config.json in which you can set compiler and std of c++ you use.
 There is a option to openFileInVsCode. If it is set to true it opens all the problems' solution file of contest to VsCode with cursor
 at specified line in templateLineNo. 
 
 ## Template
 
-Predefined template, i.e, template.cpp is provide in assests folder that is default code for each problem cpp file. You can save your own templae in template.cpp.
+Predefined template, i.e, template.cpp is provide in assets folder that is default code for each problem cpp file. You can save your own template in template.cpp.
 
 ## Additional Features
 
