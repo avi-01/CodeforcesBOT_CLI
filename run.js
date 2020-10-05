@@ -30,7 +30,7 @@ function compileProgram() {
   console.log("Compiling...".yellow);
   const compiler = config.compiler ? config.compiler : "g++";
   const std = config.std ? config.std : "c++11";
-  const fileName = join(problemPath, "sol.cpp");
+  const fileName = join(problemPath, problemId+".cpp");
   const fileSave = join(problemPath, "sol");
 
   checkExist(fileName, fs.existsSync(fileName));
